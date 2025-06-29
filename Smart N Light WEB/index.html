@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/VvbRJc88/snlmain.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart & Light Innovation | AI & Software Solutions</title>
+    <meta name="description" content="Creating intelligent software that empowers humans to live effortlessly. Smart & Light Innovation delivers cutting-edge AI solutions and custom software development.">
+    <meta name="keywords" content="AI, software development, automation, smart solutions, innovation, technology, Make in India">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smartnlight.com/">
+    <meta property="og:title" content="Smart & Light Innovation | AI & Software Solutions">
+    <meta property="og:description" content="Creating intelligent software that empowers humans to live effortlessly with cutting-edge technology solutions.">
+    <meta property="og:image" content="https://i.postimg.cc/VvbRJc88/snlmain.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart & Light Innovation | AI & Software Solutions">
+    <meta name="twitter:description" content="Creating intelligent software that empowers humans to live effortlessly with cutting-edge technology solutions.">
+    <meta name="twitter:image" content="https://i.postimg.cc/VvbRJc88/snlmain.png">
+    
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- Netlify Forms Script -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+      
+      // Netlify Forms handling
+      document.addEventListener('DOMContentLoaded', function() {
+        // Handle form submission
+        const forms = document.querySelectorAll('form[data-netlify="true"]');
+        forms.forEach(form => {
+          form.addEventListener('submit', function(e) {
+            if (form.getAttribute('netlify-honeypot')) {
+              const honeypot = form.querySelector('[name="bot-field"]');
+              if (honeypot && honeypot.value) {
+                e.preventDefault();
+                return false;
+              }
+            }
+            return true;
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Hidden Netlify Forms Attribute (for form detection) -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
