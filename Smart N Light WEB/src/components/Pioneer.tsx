@@ -59,7 +59,7 @@ const Pioneer = () => {
       contact: '+91 7780252246',
       mail: 'govardhinireddychirraiahgari@gmail.com',
       instagram: 'https://www.instagram.com/govardhini__reddy_/',
-      twitter: 'https://twitter.com/laxmi',
+      twitter: '',
       linkedin: 'https://www.linkedin.com/in/chirraiahgari-govardhini-reddy-67a34a321/',
     }
   ];
