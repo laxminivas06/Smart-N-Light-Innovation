@@ -9,7 +9,7 @@ const Pioneer = () => {
   const titles = [
     'Visionary Entrepreneur',
     'Application Developer Expert',
-  
+    'Make in India Advocate',
     'Innovation Leader',
     'Tech Evangelist'
   ];
@@ -23,24 +23,39 @@ const Pioneer = () => {
   ];
 
   const coFounders = [
-    
+
     {
       name: 'Ankamgari Sheshank Goud',
       role: 'Co-Founder',
+      titles: ['AI Specialist', 'Web Developer', 'Creative Designer', 'Musician'],
       image: 'https://i.postimg.cc/TPTL5dxM/temp-Imagefj-K3s2.avif',
-      bio: '"Exploring AI | Building Web | Designing with Purpose"',
-      about: 'I\'m Ankamgari Sheshank, a passionate creator blending technology, creativity, and vision into everything I do...',
+      bio: 'Exploring AI | Building Web | Designing with Purpose',
+      about: 'I\'m Ankamgari Sheshank, a passionate creator blending technology, creativity, and vision into everything I do. I specialize in AI and web development, with skills in creative design and music composition.',
+      achievements: [
+        'Co-founded Smart and Light Innovation',
+        'AI and web development specialist',
+        'Certified Canva designer',
+        'Skilled musician and creative artist'
+      ],
       contact: '+91 7993976247',
       mail: 'ankamgarisheshank@gmail.com',
       instagram: 'https://www.instagram.com/_.bunny04._/',
       twitter: '',
       linkedin: 'https://www.linkedin.com/in/ankamgari-sheshank-0272792a0/'
-    },{
+    },
+    {
       name: 'Chirraiahgari Govardhini Reddy',
       role: 'Co-Founder',
+      titles: ['Tech Innovator', 'Education Advocate', 'NLP Specialist', 'Mentor'],
       image: 'https://i.postimg.cc/d3DY9KSF/temp-ImageZBPe-Wh.avif',
-      bio: '“Empowering minds through visionary approaches to learning.”',
-      about: 'I am Chirraiahgari Govardhini Reddy. I am a young and passionate individual with a deep love for innovation and creation...',
+      bio: 'Empowering minds through visionary approaches to learning.',
+      about: 'I am Chirraiahgari Govardhini Reddy. I am a young and passionate individual with a deep love for innovation and creation. My journey is fueled by a strong desire to explore both technical and non-technical fields, and I strive to guide and mentor others along the way.',
+      achievements: [
+        'Co-founded Smart and Light Innovation',
+        'Specializes in Python and NLP projects',
+        'Passionate mentor and educator',
+        'Academic excellence in Computer Science'
+      ],
       contact: '+91 7780252246',
       mail: 'govardhinireddychirraiahgari@gmail.com',
       instagram: 'https://www.instagram.com/govardhini__reddy_/',
@@ -203,69 +218,129 @@ const Pioneer = () => {
 
         {/* Co-Founders Section */}
         <div className="mt-20">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-12 text-center">
             Our Co-Founders
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-20">
             {coFounders.map((founder, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
-                <div className="p-8">
-                  <div className="flex flex-col md:flex-row items-center gap-8">
-                    <div className="relative">
-                      <div className="w-48 h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl overflow-hidden">
-                        <img 
-                          src={founder.image} 
-                          alt={`${founder.name} - ${founder.role}`} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-lg shadow-md">
-                        <Award className="w-5 h-5" />
-                      </div>
+              <div key={index} className="grid lg:grid-cols-2 gap-16 items-center">
+                {/* Photo and Name */}
+                <div className="text-center lg:text-left">
+                  <div className="relative inline-block mb-8">
+                    <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl overflow-hidden mx-auto lg:mx-0">
+                      <img 
+                        src={founder.image} 
+                        alt={`${founder.name} - ${founder.role}`} 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    
-                    <div className="flex-1 text-center md:text-left">
-                      <h4 className="text-xl font-bold text-gray-900">{founder.name}</h4>
-                      <p className="text-blue-600 font-medium mb-3">{founder.role}</p>
-                      <p className="text-gray-600 italic mb-4">{founder.bio}</p>
-                      
-                      <div className="flex justify-center md:justify-start space-x-3">
-                        {founder.linkedin && (
-                          <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
-                            <Linkedin className="w-4 h-4" />
-                          </a>
-                        )}
-                        {founder.instagram && (
-                          <a href={founder.instagram} target="_blank" rel="noopener noreferrer" className="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
-                            <Instagram className="w-4 h-4" />
-                          </a>
-                        )}
-                        {founder.twitter && (
-                          <a href={founder.twitter} target="_blank" rel="noopener noreferrer" className="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
-                            <Twitter className="w-4 h-4" />
-                          </a>
-                        )}
-                        <a href={`mailto:${founder.mail}`} className="bg-gray-600 text-white p-2 rounded-lg hover:bg-gray-700 transition-colors">
-                          <Mail className="w-4 h-4" />
-                        </a>
-                      </div>
+                    <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-xl shadow-lg">
+                      <Award className="w-6 h-6" />
                     </div>
                   </div>
                   
-                  <div className="mt-6">
-                    <div className="prose text-gray-600">
-                      <p className="text-sm leading-relaxed">{founder.about.substring(0, 200)}...</p>
-                    </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-wider">
+                      {founder.name.toUpperCase()}
+                    </h3>
+                    <p className="text-lg text-blue-600 font-semibold">
+                      {founder.role}
+                    </p>
                     
-                    <div className="mt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-                      <a href={`mailto:${founder.mail}`} className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
-                        <Mail className="w-4 h-4 mr-1" /> {founder.mail}
-                      </a>
-                      <a href={`tel:${founder.contact}`} className="text-sm text-gray-600 hover:text-gray-800 flex items-center">
-                        <span className="mr-1">📱</span> {founder.contact}
+                    {/* Social Links */}
+                    <div className="flex justify-center lg:justify-start space-x-4 pt-4">
+                      {founder.linkedin && (
+                        <a 
+                          href={founder.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                        >
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                      {founder.instagram && (
+                        <a 
+                          href={founder.instagram} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-pink-600 text-white p-3 rounded-lg hover:bg-pink-700 transition-colors duration-200"
+                        >
+                          <Instagram className="w-5 h-5" />
+                        </a>
+                      )}
+                      {founder.twitter && (
+                        <a 
+                          href={founder.twitter} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-blue-400 text-white p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200"
+                        >
+                          <Twitter className="w-5 h-5" />
+                        </a>
+                      )}
+                      <a 
+                        href={`mailto:${founder.mail}`} 
+                        className="bg-gray-600 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                      >
+                        <Mail className="w-5 h-5" />
                       </a>
                     </div>
+                  </div>
+                </div>
+
+                {/* Description and Achievements */}
+                <div className="space-y-8">
+                  <div className="prose prose-lg text-gray-600">
+                    <p className="text-xl leading-relaxed mb-6">
+                      {founder.bio}
+                    </p>
+                    <p className="leading-relaxed">
+                      {founder.about}
+                    </p>
+                  </div>
+
+                  {/* Achievements - Desktop */}
+                  <div className="hidden sm:block bg-gray-50 p-6 rounded-xl">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                      Key Achievements
+                    </h4>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {founder.achievements.map((achievement, idx) => (
+                        <div key={idx} className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <span className="text-gray-700 text-sm">{achievement}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Achievements - Mobile */}
+                  <div className="sm:hidden bg-gray-50 p-6 rounded-xl">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                      Key Achievements
+                    </h4>
+                    <div className="space-y-3">
+                      {founder.achievements.map((achievement, idx) => (
+                        <div key={idx} className="flex items-start space-x-2">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                          <span className="text-gray-700 text-sm">{achievement}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Contact Info */}
+                  <div className="flex flex-wrap gap-4">
+                    <a href={`mailto:${founder.mail}`} className="flex items-center text-blue-600 hover:text-blue-800">
+                      <Mail className="w-5 h-5 mr-2" /> {founder.mail}
+                    </a>
+                    <a href={`tel:${founder.contact}`} className="flex items-center text-gray-600 hover:text-gray-800">
+                      <span className="mr-2">📱</span> {founder.contact}
+                    </a>
                   </div>
                 </div>
               </div>
