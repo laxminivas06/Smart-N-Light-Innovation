@@ -5,28 +5,28 @@ const Clients = () => {
   const clients = [
     {
       name: 'Sri Karimalesh Caterers',
-      logo: 'https://i.postimg.cc/J7bKCMPN/sk.png',
+      logo: 'https://res.cloudinary.com/ddo1zb8jf/image/upload/v1753205153/Logos_100_x_100_mm_oiq1mo.png',
       project: 'Invoice Maker',
       testimonial: 'Simple yet powerful invoice generation solution that saved us countless hours.',
       industry: 'Business Services'
     },
     {
       name: 'Wisdom Roots',
-      logo: 'https://i.postimg.cc/mZzfYzZb/wr.png',
+      logo: 'https://res.cloudinary.com/ddo1zb8jf/image/upload/v1753205187/wr_gthqqe.png',
       project: 'Resume Builder & EAPCET Rank Predictor',
       testimonial: 'Exceptional tools that helped our students with career preparation.',
       industry: 'Education'
     },
     {
       name: 'Padma Tutorials',
-      logo: 'https://i.postimg.cc/TYD7wndD/pt.png',
+      logo: 'https://res.cloudinary.com/ddo1zb8jf/image/upload/v1753205211/pt_xcoiac.png',
       project: 'Exam Portal, Attendance Management System & General Event Form',
       testimonial: 'Comprehensive educational solutions that streamlined our operations.',
       industry: 'Education'
     },
     {
       name: 'Creator Club - Sphoorthy Engineering College',
-      logo: 'https://i.postimg.cc/tC0vM6MD/cc.png',
+      logo: 'https://res.cloudinary.com/ddo1zb8jf/image/upload/v1753205073/cc_uqi8pr.png',
       project: 'Hackathon Registration Form & Club Event Form',
       testimonial: 'Perfect solutions for managing our college events and hackathons.',
       industry: 'Education'
