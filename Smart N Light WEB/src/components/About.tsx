@@ -31,7 +31,7 @@ const About = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <img 
-              src="https://i.postimg.cc/VvbRJc88/snlmain.png" 
+              src="https://res.cloudinary.com/ddo1zb8jf/image/upload/v1753205268/snl_xbktbt.png" 
               alt="Smart and Light Innovation Logo" 
               className="h-36 w-auto"
             />

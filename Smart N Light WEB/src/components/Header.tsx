@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
               className="flex items-center focus:outline-none"
             >
               <img 
-                src="https://i.postimg.cc/VvbRJc88/snlmain.png" 
+                src="https://res.cloudinary.com/ddo1zb8jf/image/upload/v1753205268/snl_xbktbt.png" 
                 alt="Smart N Light Innovation Logo" 
                 className="h-8 sm:h-10 w-auto"
               />
