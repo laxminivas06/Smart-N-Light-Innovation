@@ -1,5 +1,5 @@
-import  { useState, useEffect } from 'react';
-import { Award, Linkedin, Mail, Star, Github, Instagram } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Award, Linkedin, Mail, Star, Github, Instagram, Twitter } from 'lucide-react';
 
 const Pioneer = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -9,18 +9,44 @@ const Pioneer = () => {
   const titles = [
     'Visionary Entrepreneur',
     'Application Developer Expert',
-    'Make in India Advocate',
+  
     'Innovation Leader',
     'Tech Evangelist'
   ];
 
   const achievements = [
     'Founded Smart and Light Innovation',
-    
     'Speaker at several tech conferences',
     'Mentored 50+ startups',
     'Advocate for ethical AI development',
     'Digital India campaign contributor'
+  ];
+
+  const coFounders = [
+    
+    {
+      name: 'Ankamgari Sheshank Goud',
+      role: 'Co-Founder',
+      image: 'https://i.postimg.cc/TPTL5dxM/temp-Imagefj-K3s2.avif',
+      bio: '"Exploring AI | Building Web | Designing with Purpose"',
+      about: 'I\'m Ankamgari Sheshank, a passionate creator blending technology, creativity, and vision into everything I do...',
+      contact: '+91 7993976247',
+      mail: 'ankamgarisheshank@gmail.com',
+      instagram: 'https://www.instagram.com/_.bunny04._/',
+      twitter: '',
+      linkedin: 'https://www.linkedin.com/in/ankamgari-sheshank-0272792a0/'
+    },{
+      name: 'Chirraiahgari Govardhini Reddy',
+      role: 'Co-Founder',
+      image: 'https://i.postimg.cc/d3DY9KSF/temp-ImageZBPe-Wh.avif',
+      bio: '“Empowering minds through visionary approaches to learning.”',
+      about: 'I am Chirraiahgari Govardhini Reddy. I am a young and passionate individual with a deep love for innovation and creation...',
+      contact: '+91 7780252246',
+      mail: 'govardhinireddychirraiahgari@gmail.com',
+      instagram: 'https://www.instagram.com/govardhini__reddy_/',
+      twitter: 'https://twitter.com/laxmi',
+      linkedin: 'https://www.linkedin.com/in/chirraiahgari-govardhini-reddy-67a34a321/',
+    }
   ];
 
   // Typing animation effect
@@ -55,12 +81,13 @@ const Pioneer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Meet Our Founder
+            Our Leadership Team
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Founder Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Photo and Name */}
           <div className="text-center lg:text-left">
             <div className="relative inline-block mb-8">
@@ -171,6 +198,78 @@ const Pioneer = () => {
             <blockquote className="border-l-4 border-blue-600 pl-6 italic text-gray-600">
               "Technology should be a bridge that connects human potential with unlimited possibilities. Every solution we create must serve this greater purpose."
             </blockquote>
+          </div>
+        </div>
+
+        {/* Co-Founders Section */}
+        <div className="mt-20">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Our Co-Founders
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            {coFounders.map((founder, index) => (
+              <div key={index} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+                <div className="p-8">
+                  <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="relative">
+                      <div className="w-48 h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl overflow-hidden">
+                        <img 
+                          src={founder.image} 
+                          alt={`${founder.name} - ${founder.role}`} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-lg shadow-md">
+                        <Award className="w-5 h-5" />
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 text-center md:text-left">
+                      <h4 className="text-xl font-bold text-gray-900">{founder.name}</h4>
+                      <p className="text-blue-600 font-medium mb-3">{founder.role}</p>
+                      <p className="text-gray-600 italic mb-4">{founder.bio}</p>
+                      
+                      <div className="flex justify-center md:justify-start space-x-3">
+                        {founder.linkedin && (
+                          <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <Linkedin className="w-4 h-4" />
+                          </a>
+                        )}
+                        {founder.instagram && (
+                          <a href={founder.instagram} target="_blank" rel="noopener noreferrer" className="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                            <Instagram className="w-4 h-4" />
+                          </a>
+                        )}
+                        {founder.twitter && (
+                          <a href={founder.twitter} target="_blank" rel="noopener noreferrer" className="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                            <Twitter className="w-4 h-4" />
+                          </a>
+                        )}
+                        <a href={`mailto:${founder.mail}`} className="bg-gray-600 text-white p-2 rounded-lg hover:bg-gray-700 transition-colors">
+                          <Mail className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <div className="prose text-gray-600">
+                      <p className="text-sm leading-relaxed">{founder.about.substring(0, 200)}...</p>
+                    </div>
+                    
+                    <div className="mt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                      <a href={`mailto:${founder.mail}`} className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
+                        <Mail className="w-4 h-4 mr-1" /> {founder.mail}
+                      </a>
+                      <a href={`tel:${founder.contact}`} className="text-sm text-gray-600 hover:text-gray-800 flex items-center">
+                        <span className="mr-1">📱</span> {founder.contact}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
